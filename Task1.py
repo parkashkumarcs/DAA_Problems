@@ -1,6 +1,6 @@
 # Before we do start the coding in python let's first overview the
 # problem statement and understand precisely what we need to do.
-# Problem1:
+
 # Task 1: Find Duplicates in an Unsorted Array
 # Write a program to identify and print all duplicate elements in an unsorted array.
 # Example Input: [4, 2, 7, 2, 5, 4]

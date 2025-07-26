@@ -1,6 +1,6 @@
 # Let's first overview the
 # problem statement and understand the problem what we need to do.
-# Problem1:
+
 # Task 2: Merge Two Sorted Arrays
 # Write a program that merges two sorted arrays into a single sorted array.
 # Example Input: [1, 3, 5], [2, 4, 6]

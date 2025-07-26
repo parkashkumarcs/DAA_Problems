@@ -1,5 +1,5 @@
 # First of all understand the problem statement and the requirements.
-# Problem1:
+
 # Task 4: Find Common Elements in Two Lists
 # Write a function to find all common elements between two lists.
 # Optimize to use a maximum of n + q comparisons, where n and q are the lengths of the two

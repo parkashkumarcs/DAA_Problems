@@ -1,6 +1,6 @@
 # Let's first overview the
 # problem statement and understand precisely what we need to do.
-# Problem1:
+
 # Task 3: Matrix Multiplication
 # Implement matrix multiplication (2D arrays).
 # Ensure matrices are compatible for multiplication.
