@@ -13,19 +13,16 @@ class TreeNode:  # Represents a node in the BST
         self.left = None
         self.right = None
         self.val = key
-
 class BinarySearchTree:  # Represents the BST itself
     # Initialize the BST with no root
     def __init__(self):
         self.root = None
-
     def insert(self, key):  # Insert a new key into the BST
         # If the tree is empty, set the root to the new key
         if self.root is None:
             self.root = TreeNode(key)
         else:
             self._insert_rec(self.root, key)
-
     def _insert_rec(self, node, key):  # Helper function to insert a key recursively
         # Compare the key with the current node's value
         if key < node.val:
@@ -38,24 +35,17 @@ class BinarySearchTree:  # Represents the BST itself
                 node.right = TreeNode(key)
             else:
                 self._insert_rec(node.right, key)
-
     def in_order_traversal(self, node):  # Perform in-order traversal to print the BST in sorted order
         # Traverse the left subtree, visit the node, then traverse the right subtree
         if node is not None:
             self.in_order_traversal(node.left)
-            self._print_value(node.val)
+            print(node.val, end=' ')
             self.in_order_traversal(node.right)
-
-    def _print_value(self, val):  # Custom print function to match your style
-        print(val, end=' ')
-
     def print_in_order(self):
         self.in_order_traversal(self.root)
         print()
-
     def delete(self, key):  # Delete a node with the given key
         self.root = self._delete_rec(self.root, key)
-
     def _delete_rec(self, node, key):  # Helper function to delete a node recursively
         if node is None:
             return node
@@ -75,36 +65,25 @@ class BinarySearchTree:  # Represents the BST itself
             node.val = temp.val
             node.right = self._delete_rec(node.right, temp.val)
         return node
-
     def _min_value_node(self, node):  # Find the node with the minimum value
         current = node
         while current.left is not None:
             current = current.left
         return current
-
 # Example usage:
 bst = BinarySearchTree()
 # Insert multiple integers into the BST
 numbers = [7, 3, 9, 1, 5, 8, 10]
-
-# User-defined logic to iterate instead of using append or built-in list methods
-index = 0
-length = 7
-while index < length:
-    bst.insert(numbers[index])
-    index = index + 1
-
+for number in numbers:
+    bst.insert(number)
 # Print the in-order traversal of the BST
 print("In-order Traversal of the BST before deletion:")
 bst.print_in_order()
-
 # Delete a node from the BST
 bst.delete(3)
-
 # Print the in-order traversal of the BST after deletion
 print("In-order Traversal of the BST after deleting 3:")
 bst.print_in_order()
-
 # This code extends the Binary Search Tree (BST) with a deletion method.
 # The user can insert multiple integers, delete a specified integer, and the in-order traversal will print the remaining elements in sorted order.
 # Example Input: 7, 3, 9, 1, 5, 8, 10 (inserted), delete 3
